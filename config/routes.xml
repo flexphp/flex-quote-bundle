@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<routes xmlns="http://symfony.com/schema/routing"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/routing http://symfony.com/schema/routing/routing-1.0.xsd">
+
+    <route id="flexphp.quote.exchanges.index" controller="flexphp.quote.bundle.exchange_controller::index" path="/quote" methods="GET" />
+
+    <route id="flexphp.quote.exchanges.index" controller="flexphp.quote.bundle.exchange_controller::index" path="/exchanges" methods="GET" />
+    <route id="flexphp.quote.exchanges.new" controller="flexphp.quote.bundle.exchange_controller::new" path="/exchanges/new" methods="GET" />
+    <route id="flexphp.quote.exchanges.create" controller="flexphp.quote.bundle.exchange_controller::create" path="/exchanges/create" methods="POST" />
+    <route id="flexphp.quote.exchanges.read" controller="flexphp.quote.bundle.exchange_controller::read" path="/exchanges/{id}" methods="GET" />
+    <route id="flexphp.quote.exchanges.edit" controller="flexphp.quote.bundle.exchange_controller::edit" path="/exchanges/edit/{id}" methods="GET" />
+    <route id="flexphp.quote.exchanges.update" controller="flexphp.quote.bundle.exchange_controller::update" path="/exchanges/update/{id}" methods="PUT" />
+    <route id="flexphp.quote.exchanges.delete" controller="flexphp.quote.bundle.exchange_controller::delete" path="/exchanges/delete/{id}" methods="DELETE" />
+</routes>

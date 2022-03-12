@@ -1,0 +1,19 @@
+{% for _exchange in exchanges %}
+    <tr>
+        <td>{{ _exchange.id }}</td>
+        <td>{{ _exchange.date }}</td>
+        <td>{{ _exchange.currency }}</td>
+        <td>{{ _exchange.quote }}</td>
+        <td class="text-center">
+            <div class="btn-group">
+                <a href="{{ path('flexphp.quote.exchanges.read', {id: _exchange.id}) }}" class="btn btn-sm btn-outline-light" title="{% trans from 'messages' %}action.read{% endtrans %}">
+                    <i class="fa fa-eye text-dark" aria-hidden="true"></i>
+                </a>
+
+                <a href="{{ path('flexphp.quote.exchanges.edit', {id: _exchange.id}) }}" class="btn btn-sm btn-outline-light" title="{% trans from 'messages' %}action.edit{% endtrans %}">
+                    <i class="fa fa-edit text-info" aria-hidden="true"></i>
+                </a>
+            </div>
+        </td>
+    </tr>
+{% endfor %}
