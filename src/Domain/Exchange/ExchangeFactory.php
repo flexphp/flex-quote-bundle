@@ -25,7 +25,7 @@ final class ExchangeFactory
         }
 
         if (isset($data['id'])) {
-            $exchange->setId((string)$data['id']);
+            $exchange->setId((int)$data['id']);
         }
 
         if (isset($data['date'])) {
