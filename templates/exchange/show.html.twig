@@ -18,24 +18,24 @@
         </div>
 
         <div class="card-body">
-            <div class="form-group"><label>{% trans %}label.date{% endtrans %}</label><div class="form-control-plaintext">{{ exchange.date }}</div></div>
+            <div class="form-group"><label>{% trans %}label.date{% endtrans %}</label><div class="form-control-plaintext">{{ exchange.date|date('Y-m-d', app.user.timezone) }}</div></div>
             <div class="form-group"><label>{% trans %}label.currency{% endtrans %}</label><div class="form-control-plaintext">{{ exchange.currency }}</div></div>
-            <div class="form-group"><label>{% trans %}label.quote{% endtrans %}</label><div class="form-control-plaintext">{{ exchange.quote }}</div></div>
+            <div class="form-group"><label>{% trans %}label.quote{% endtrans %}</label><div class="form-control-plaintext money-format">{{ exchange.quote }}</div></div>
         </div>
 
-        <div class="card-footer">
-            <div class="row">
-                <div class="col">
-                    {{ include('@FlexPHPQuote/exchange/_delete_form.html.twig', {exchange: exchange}, with_context = false) }}
-                </div>
+        {# <div class="card-footer"> #}
+        {#     <div class="row"> #}
+        {#         <div class="col"> #}
+        {#             {{ include('@FlexPHPQuote/exchange/_delete_form.html.twig', {exchange: exchange}, with_context = false) }} #}
+        {#         </div> #}
 
-                <div class="col text-right">
-                    <a href="{{ path('flexphp.quote.exchanges.edit', {id: exchange.id}) }}" class="btn btn-outline-primary">
-                        <i class="fa fa-edit" aria-hidden="true"></i>
-                        <span class="btn-text">{% trans from 'messages' %}action.edit{% endtrans %}</span>
-                    </a>
-                </div>
-            </div>
-        </div>
+        {#         <div class="col text-right"> #}
+        {#             <a href="{{ path('flexphp.quote.exchanges.edit', {id: exchange.id}) }}" class="btn btn-outline-primary"> #}
+        {#                 <i class="fa fa-edit" aria-hidden="true"></i> #}
+        {#                 <span class="btn-text">{% trans from 'messages' %}action.edit{% endtrans %}</span> #}
+        {#             </a> #}
+        {#         </div> #}
+        {#     </div> #}
+        {# </div> #}
     </div>
 {% endblock %}

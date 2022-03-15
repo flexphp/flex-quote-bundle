@@ -9,6 +9,7 @@
  */
 namespace FlexPHP\Bundle\QuoteBundle\Domain\Exchange;
 
+use DateTime;
 use FlexPHP\Bundle\HelperBundle\Domain\Helper\FactoryExtendedTrait;
 use FlexPHP\Bundle\UserBundle\Domain\User\UserFactory;
 
@@ -29,7 +30,7 @@ final class ExchangeFactory
         }
 
         if (isset($data['date'])) {
-            $exchange->setDate(\is_string($data['date']) ? new \DateTime($data['date']) : $data['date']);
+            $exchange->setDate(\is_string($data['date']) ? new DateTime($data['date']) : $data['date']);
         }
 
         if (isset($data['currency'])) {

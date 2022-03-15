@@ -7,9 +7,9 @@
         <defaults autowire="true" autoconfigure="true"/>
 
         <service id="flexphp.quote.bundle" class="FlexPHP\Bundle\Quote" />
-        <service id="FlexPHP\Bundle\Quote" alias="flexphp.quote.bundle" />
+        <service id="FlexPHP\Bundle\QuoteBundle" alias="flexphp.quote.bundle" />
 
-        <service id="flexphp.quote.bundle.exchange_controller" class="FlexPHP\Bundle\Quote\Controller\ExchangeController" public="true" />
+        <service id="flexphp.quote.bundle.exchange_controller" class="FlexPHP\Bundle\QuoteBundle\Controller\ExchangeController" public="true" />
 
         <service id="FlexPHP\Bundle\QuoteBundle\Command\Exchange\CreateExchangeCommand">
             <tag name="console.command" command="quote:exchanges:create"/>
