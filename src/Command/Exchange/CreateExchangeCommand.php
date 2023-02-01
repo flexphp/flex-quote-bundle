@@ -49,7 +49,7 @@ final class CreateExchangeCommand extends Command
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $data = $input->getArguments();
-        $date = $data['Date'] ?? \date('Y-m-d');
+        $date = $data['Date'] ?? \date('Y-m-d 05:00:00');
         $fromCurrency = 'USD';
         $toCurrency = $data['Currency'] ?? 'COP';
         $quote = 3000.00;
