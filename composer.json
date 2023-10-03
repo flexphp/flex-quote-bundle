@@ -10,15 +10,15 @@
         }
     ],
     "require": {
-        "symfony/http-client": "5.2",
+        "symfony/http-client": "^5.2",
         "florianv/swap": "^4.3",
         "php-http/curl-client": "^2.2",
         "guzzlehttp/psr7": "^2.1"
     },
     "require-dev": {
-        "symfony/dependency-injection": "5.2",
-        "symfony/config": "5.2",
-        "symfony/http-kernel": "5.2"
+        "symfony/dependency-injection": "^5.2",
+        "symfony/config": "^5.2",
+        "symfony/http-kernel": "^5.2"
     },
     "autoload": {
         "psr-4": {
@@ -30,5 +30,10 @@
             "FlexPHP\\Bundle\\QuoteBundle\\Tests\\": "tests/"
         }
     },
-    "prefer-stable": true
+    "prefer-stable": true,
+    "config": {
+        "allow-plugins": {
+            "php-http/discovery": false
+        }
+    }
 }
